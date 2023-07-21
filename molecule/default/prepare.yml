@@ -5,6 +5,10 @@
 
   tasks:
 
+    - name: "Run ansible-galaxy"
+      ansible.builtin.command: "ansible-galaxy install --force -r requirements.yml"
+
+
     - name: Make remote s3 test directory
       become: true
       file:
